@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Validation</title>
+		<style>
+			#container{
+			
+				width: 240px;
+				height: 150px;
+				border: 1px solid black;
+				background-color: #867979;
+				margin: auto;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				position: absolute;
+			}
+			
+			#content{
+	
+				top: 20%;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				text-align: center;
+				position: absolute;
+}	
+		</style>
+	</head>	
+	<body>
+		<div id="container">
+			<div id="content">
+				<input type="text" id="pid"/>
+				<button type="button" onclick="validate()">Test</button>
+			</div>
+		</div>	
+		<script>
+			
+			function isEmpty(x)
+			{	
+				this.x=x;
+				this.ans=function(){
+				
+					if(this.x == null || this.x.trim().length == "")
+					{
+						return true;
+				
+					}
+				
+					else{
+						return false;
+					}
+		
+				};
+			
+			}
+		
+			function validate() {
+				var x = document.getElementById("pid").value;
+				var y = new isEmpty(x);
+				alert(y.ans());
+			}
+		
+		</script>
+	</body>
+</html>
