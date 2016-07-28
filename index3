@@ -1,0 +1,211 @@
+<html>
+<head>
+<title>Index3</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+    $("h4").click(function(){
+	$("form").fadeToggle();
+	});
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#f00");
+    });    
+	 $("h4").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+        }, 
+        click: function(){
+            $(this).css("background-color", "#20B2AA");
+        }  
+    });
+});
+</script>
+<style>
+header,footer{
+	padding: 1em;
+    color: white;
+    background-color: #20B2AA;
+    clear: left;
+    text-align: center;
+}
+h4{
+	color: white;
+    background-color: #20B2AA;
+	text-align: center;
+}
+nav,ul,li{
+	display: inline;	
+	padding: 30px;
+	margin: 30px;
+	
+}
+a:link {
+    color: red;
+	text-decoration: none;
+	 background-color: yellow;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+	text-decoration: none;
+	background-color: cyan;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+	text-decoration: underline;
+	background-color: lightgreen;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+	text-decoration: underline;
+	background-color: hotpink;
+	
+}
+#menu{
+	
+	background-color: lightgrey;
+	border: 3px solid red;
+	border-radius: 5px;
+	margin: auto;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.left-section{
+width: 70%;	
+	float:left;
+}
+aside{
+	width:28%;
+ float:left;
+}
+	
+		
+</style>
+</head>
+<body>
+<div id="container">
+<header>
+	<h1>ABC Coaching Classes</h1>
+	<h6>Believe in excellence</h6>
+</header>
+<div id="menu">
+	<nav>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Schedule</a></li>
+		<li><a href="#">Syllabus</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</nav>
+</div>
+<div class="left-section">
+<section>
+	<h1><span style="color:blue; font-weight:bold;">About ABC Coaching Classes</span></h1>
+	<p>Incorporated in 1994, ABC Coaching Classes is India’s one of the leading solution providers in Information Technology Training, Staffing and Products & Tools Consulting services to both Retail ( i.e. students, professionals and individuals) and Corporate customers.
+With our headquarters in Pune, one of the IT hubs of India, our activities are spread over many locations in the state of Maharashtra and other IT Metros in India like Bangalore, New Delhi, Chennai etc. 
+
+We are an ISO 9001:2008 certified organization that operates through well-defined systems and procedures.
+
+A formidable team of over 600 qualified professionals, 48+ training locations in India, and strong associations with Global Technology Leaders such as Microsoft, Oracle, RedHat, Salesforce, SAP, HP, Hortonworks, Peoplecert and EC-Council and testing & assessment services through Prometric, Pearson-Vue, Kryterion, etc. are undoubtedly our core strengths. 
+
+As a R.E.P., ABC Coaching Classes has been approved by Project Management Institute (PMI) to issue Professional Development Units (PDUs) for its training courses.</p>
+</section>
+<article>
+	<h2><span style="color:blue; font-weight:bold;">Technologies Stuff</span></h2>
+	<table>
+		<tr>
+			<th>Subjects</th>
+			<th>Duration</th>
+			<th>Batch Time</th>
+			<th>Fees</th>
+		</tr>
+		<tr>
+			<td>Java</td>
+			<td>6 Months</td>
+			<td>8-10AM</td>
+			<td>13000</td>
+		</tr>
+		<tr>
+			<td>C,C++,DS</td>
+			<td>5 Months</td>
+			<td>10-12AM</td>
+			<td>6500</td>
+		</tr>
+		<tr>
+			<td>Android</td>
+			<td>2 Months</td>
+			<td>1-3PM</td>
+			<td>5000</td>
+		</tr>
+		<tr>
+			<td>Web Technologies</td>
+			<td>2.5 Months</td>
+			<td>3.30-5.30PM</td>
+			<td>7000</td>
+		</tr>
+	</table>
+</article>
+	</div>
+	
+<aside>
+	<h4>Register Here</h4>
+	<form>
+		<fieldset>
+    	<legend>Personal information:</legend>
+		First Name:<br/>
+		<input type="text" name="firstname"/><br/><br/>
+		Last Name:<br/>
+		<input type="text" name="lastname"/><br/><br/>
+		<label for="male">Male</label>
+  		<input type="radio" name="gender" id="male" value="male"/>
+  		<label for="female">Female</label>
+  		<input type="radio" name="gender" id="female" value="female"/>
+  		<label for="other">Other</label>
+  		<input type="radio" name="gender" id="other" value="other"/><br/><br/>
+		<select name="city">
+  			<option value="select">Select City</option>
+			<option value="volvo">Pune</option>
+  			<option value="saab">Mumbai</option>
+  			<option value="fiat">Banglore</option>
+  			<option value="audi">Chennai</option>
+		</select><br/><br/>
+  		<input type="submit" value="Submit"/><br/><br/>
+		<a href="#">Login here</a>
+		<lable>|</lable>
+		<a href="#">Forgot Password</a>
+		</fieldset>
+	</form>	
+</aside>
+<footer>
+Copyright@abc.com
+</footer>
+</div>
+</body>
+</html>
