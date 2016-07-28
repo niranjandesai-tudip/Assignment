@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<title>Responsive</title>
+<style>
+#container{
+	width: 150px;
+	height: 150px;
+	border: thin;
+	background-color: red;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	position: absolute;
+}
+#center{
+	
+	top: 20%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	color: white;
+	text-align: center;
+	position: absolute;
+	
+}	
+</style>
+</head>
+<body>
+<div id="container">
+	<div id="center">
+		<h1>HI</h1>
+	</div>
+</div>
+</body>
+</html>
